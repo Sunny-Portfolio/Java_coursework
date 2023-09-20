@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=TowersOfHanoi
+comment0.text=\n\ TowersOfHanoi\ represents\ the\ classic\ Towers\ of\ Hanoi\ puzzle.\n\n\ @author\ Java\ Foundations\n\ @version\ 4.0\n
+comment1.params=disks
+comment1.target=TowersOfHanoi(int)
+comment1.text=\n\ Sets\ up\ the\ puzzle\ with\ the\ specified\ number\ of\ disks.\n\n\ @param\ disks\ the\ number\ of\ disks\ \n
+comment2.params=
+comment2.target=void\ solve()
+comment2.text=\n\ Performs\ the\ initial\ call\ to\ moveTower\ to\ solve\ the\ puzzle.\n\ Moves\ the\ disks\ from\ tower\ 1\ to\ tower\ 3\ using\ tower\ 2.\n
+comment3.params=numDisks\ start\ end\ temp
+comment3.target=void\ moveTower(int,\ int,\ int,\ int)
+comment3.text=\n\ Moves\ the\ specified\ number\ of\ disks\ from\ one\ tower\ to\ another\n\ by\ moving\ a\ subtower\ of\ n-1\ disks\ out\ of\ the\ way,\ moving\ one\n\ disk,\ then\ moving\ the\ subtower\ back.\ Base\ case\ of\ 1\ disk.\n\n\ @param\ numDisks\ \ the\ number\ of\ disks\ to\ move\n\ @param\ start\ \ \ \ \ the\ starting\ tower\n\ @param\ end\ \ \ \ \ \ \ the\ ending\ tower\n\ @param\ temp\ \ \ \ \ \ the\ temporary\ tower\n
+comment4.params=start\ end
+comment4.target=void\ moveOneDisk(int,\ int)
+comment4.text=\n\ Prints\ instructions\ to\ move\ one\ disk\ from\ the\ specified\ start\n\ tower\ to\ the\ specified\ end\ tower.\n\n\ @param\ start\ \ the\ starting\ tower\n\ @param\ end\ \ \ \ the\ ending\ tower\n
+numComments=5

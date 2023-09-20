@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=SolveTowers
+comment0.text=\n\ SolveTowers\ uses\ recursion\ to\ solve\ the\ Towers\ of\ Hanoi\ puzzle.\n\n\ @author\ Java\ Foundations\n\ @version\ 4.0\n
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment1.text=\n\ Creates\ a\ TowersOfHanoi\ puzzle\ and\ solves\ it.\n
+numComments=2
