@@ -88,8 +88,8 @@ public class Sorting
 		{
 			for (scan = 0; scan <= position - 1; scan++)
 			{
-				printAll(data);
-				System.out.println("\tPasses at num\tA) " + data[scan] + "\t\tB) " + data[scan+1]);
+//				printAll(data);
+//				System.out.println("\tPasses at num\tA) " + data[scan] + "\t\tB) " + data[scan+1]);
 
 				if (data[scan].compareTo(data[scan + 1]) > 0) {
 					swap(data, scan, scan + 1);
@@ -122,8 +122,8 @@ public class Sorting
 		{
 			swapFlag = false;
 			for (scan = 0; scan <= position - 1; scan++) {
-				printAll(data);
-				System.out.println("\tPasses at num\tA) " + data[scan] + "\t\tB) " + data[scan+1]);
+//				printAll(data);
+//				System.out.println("\tPasses at num\tA) " + data[scan] + "\t\tB) " + data[scan+1]);
 				if (data[scan].compareTo(data[scan + 1]) > 0) {
 					swap(data, scan, scan + 1);
 					swapFlag = true;
@@ -162,8 +162,8 @@ public class Sorting
 				swapFlag = false;
 				for (scan = 0; scan < dataSize - gap; scan++) {
 					if (data[scan].compareTo(data[scan+gap]) > 0) {
-						printAll(data);
-						System.out.println("\t Swap\tA) " + data[scan] + "\t\tB) " + data[scan+gap]);
+//						printAll(data);
+//						System.out.println("\t Swap\tA) " + data[scan] + "\t\tB) " + data[scan+gap]);
 						swap(data, scan, scan+gap);
 						swapFlag = true;
 						swapCount++;
@@ -173,8 +173,8 @@ public class Sorting
 			}
 			gap /= 2;
 		}
-		printAll(data);
-		System.out.println();
+//		printAll(data);
+//		System.out.println();
 		System.out.println("Num of comparison: " + compareCount + "\tNum of swap: " + swapCount);
 	}
 

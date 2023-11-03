@@ -1,3 +1,5 @@
+import java.time.Duration;
+import java.time.Instant;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
@@ -13,6 +15,9 @@ public class TestShellSort {
 
         int upperLimit = 50;
 
+        /**
+         * Assignment 1 part 1
+         */
         list2 = genRandom(10, upperLimit);
         list3 = genRandom(20, upperLimit);
 
@@ -21,6 +26,9 @@ public class TestShellSort {
         Sorting.shellSort(list2);
         Sorting.shellSort(list3);
 
+        /**
+         * Assignment 1 part 2
+         */
         list2 = genRandom(10, upperLimit);
         list3 = Arrays.copyOf(list2,10);
 
@@ -31,6 +39,65 @@ public class TestShellSort {
         // Sort sorted arrays by bubble sort
         Sorting.bubbleSort(list2);
         Sorting.bubbleSort2(list3);
+
+        /**
+         * Assignment 1 part 3
+         */
+        System.out.println("Part 3");
+        list1 = genRandom(10, upperLimit);
+        list2 = Arrays.copyOf(list1,10);
+        list3 = Arrays.copyOf(list1,10);
+
+        Instant start;
+        Instant stop;
+
+        start = Instant.now();
+        Sorting.bubbleSort(list1);
+        stop = Instant.now();
+        System.out.println("Execution Time = " + Duration.between(start, stop).toNanos());
+        start = Instant.now();
+        Sorting.bubbleSort2(list2);
+        stop = Instant.now();
+        System.out.println("Execution Time = " + Duration.between(start, stop).toNanos());
+        start = Instant.now();
+        Sorting.shellSort(list3);
+        stop = Instant.now();
+        System.out.println("Execution Time = " + Duration.between(start, stop).toNanos());
+
+
+        list1 = genRandom(100, upperLimit);
+        list2 = Arrays.copyOf(list1,100);
+        list3 = Arrays.copyOf(list1,100);
+
+        start = Instant.now();
+        Sorting.bubbleSort(list1);
+        stop = Instant.now();
+        System.out.println("Execution Time = " + Duration.between(start, stop).toNanos());
+        start = Instant.now();
+        Sorting.bubbleSort2(list2);
+        stop = Instant.now();
+        System.out.println("Execution Time = " + Duration.between(start, stop).toNanos());
+        start = Instant.now();
+        Sorting.shellSort(list3);
+        stop = Instant.now();
+        System.out.println("Execution Time = " + Duration.between(start, stop).toNanos());
+
+        list1 = genRandom(1000, upperLimit);
+        list2 = Arrays.copyOf(list1,1000);
+        list3 = Arrays.copyOf(list1,1000);
+
+        start = Instant.now();
+        Sorting.bubbleSort(list1);
+        stop = Instant.now();
+        System.out.println("Execution Time = " + Duration.between(start, stop).toNanos());
+        start = Instant.now();
+        Sorting.bubbleSort2(list2);
+        stop = Instant.now();
+        System.out.println("Execution Time = " + Duration.between(start, stop).toNanos());
+        start = Instant.now();
+        Sorting.shellSort(list3);
+        stop = Instant.now();
+        System.out.println("Execution Time = " + Duration.between(start, stop).toNanos());
 
 
     }
