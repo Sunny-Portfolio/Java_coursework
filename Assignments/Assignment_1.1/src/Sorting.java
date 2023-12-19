@@ -82,14 +82,14 @@ public class Sorting
 		int position, scan;
 		int swapCount = 0;
 		int compareCount = 0;
-		System.out.println("\n\nBubble Sort Start! --- Size is (" + data.length + ")");
+		System.out.println("\nBubble Sort Start! --- Size is (" + data.length + ")");
 
 		for (position =  data.length - 1; position >= 0; position--)
 		{
 			for (scan = 0; scan <= position - 1; scan++)
 			{
-//				printAll(data);
-//				System.out.println("\tPasses at num\tA) " + data[scan] + "\t\tB) " + data[scan+1]);
+				printAll(data);
+				System.out.println("\tPasses at num\tA) " + data[scan] + "\t\tB) " + data[scan+1]);
 
 				if (data[scan].compareTo(data[scan + 1]) > 0) {
 					swap(data, scan, scan + 1);
@@ -116,14 +116,15 @@ public class Sorting
 		int swapCount = 0;
 		int compareCount = 0;
 
-		System.out.println("\n\nBubble Sort V2 Start! --- Size is (" + data.length + ")");
+		System.out.println("\nBubble Sort V2 Start! --- Size is (" + data.length + ")");
 
+		// Implement swap flag as a condition with a while loop to replace the for loop
 		while (position >= 0 && swapFlag)
 		{
 			swapFlag = false;
 			for (scan = 0; scan <= position - 1; scan++) {
-//				printAll(data);
-//				System.out.println("\tPasses at num\tA) " + data[scan] + "\t\tB) " + data[scan+1]);
+				printAll(data);
+				System.out.println("\tPasses at num\tA) " + data[scan] + "\t\tB) " + data[scan+1]);
 				if (data[scan].compareTo(data[scan + 1]) > 0) {
 					swap(data, scan, scan + 1);
 					swapFlag = true;
@@ -146,33 +147,34 @@ public class Sorting
 	public static <T extends Comparable<T>>
 	void shellSort(T[] data)
 	{
-		int scan;
 		int dataSize = data.length;
 		boolean swapFlag = true;
 		int gap = dataSize / 2;
 		int swapCount = 0;
 		int compareCount = 0;
 
-		System.out.println("\n\nShell Sort Start! --- Size is (" + dataSize + ")");
+		System.out.println("\nShell Sort 2 Start! --- Size is (" + dataSize + ")");
+//		printAll(data);
+//		System.out.println("\n------------");
 
-
-		while (gap > 0) {
+		do {
 			swapFlag = true;
-			while (swapFlag) {
+			do {
 				swapFlag = false;
-				for (scan = 0; scan < dataSize - gap; scan++) {
-					if (data[scan].compareTo(data[scan+gap]) > 0) {
-//						printAll(data);
-//						System.out.println("\t Swap\tA) " + data[scan] + "\t\tB) " + data[scan+gap]);
-						swap(data, scan, scan+gap);
+				for (int s = 0; s < dataSize - gap; s++) {
+					if (data[s].compareTo(data[s+gap]) > 0) {
+						printAll(data);
+						System.out.println("\t Swap\tA) " + data[s] + "\t\tB) " + data[s+gap]);
+						swap(data, s, s+gap);
 						swapFlag = true;
 						swapCount++;
 					}
 					compareCount++;
 				}
-			}
+			} while (swapFlag);
 			gap /= 2;
-		}
+		} while (gap > 0);
+
 //		printAll(data);
 //		System.out.println();
 		System.out.println("Num of comparison: " + compareCount + "\tNum of swap: " + swapCount);
